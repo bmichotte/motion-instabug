@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.version = Version
 
   files = []
-  files << 'README.rdoc'
+  files << 'README.md'
   files << 'LICENSE'
   files.concat(Dir.glob('lib/**/*.rb'))
   spec.files = files
