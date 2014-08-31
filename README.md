@@ -1,14 +1,14 @@
-= motion-instabug
+# motion-instabug
 
 motion-instabug allows RubyMotion projects to easily embed the Instabug
 SDK and be submitted to the Instabug platform.
 
-== Requirements
+## Requirements
 
 * RubyMotion 1.0 or greater (see http://www.rubymotion.com).
 * An Instabug account, can be obtained for free at http://instabug.com.
 
-== Installation
+## Installation
 
 1. `gem install motion-instabug`
 
@@ -16,35 +16,36 @@ SDK and be submitted to the Instabug platform.
 
 3. `rake pod:install`
 
-== Setup
+## Setup
 
-Edit the +Rakefile+ of your RubyMotion project and add the following require lines.
+Edit the **Rakefile** of your RubyMotion project and add the following require lines.
+
 ```ruby
-Motion::Project::App.setup do |app|
-    # ...
-    app.instabug do
-        app.instabug.api_token = 'your_instabug_token'
+    Motion::Project::App.setup do |app|
+        # ...
+        app.instabug do
+            app.instabug.api_token = 'your_instabug_token'
+        end
     end
-end
 ```
 
-   You can retrieve the values for +api_token+ in your Instabug account page.
+You can retrieve the values for **api_token** in your Instabug account page.
 
-== Usage
+## Usage
 
-motion-instabug introduces a +instabug+ Rake task to your project, which can be used to submit a build.
+motion-instabug introduces a **instabug** Rake task to your project, which can be used to submit a build.
 
-  $ rake instabug
+  `$ rake instabug`
 
-== Todo
+## Todo
 
 Color customization from the Rakefile
 
-== Thanks
+## Thanks
 
 This gem is a copy-paste of https://github.com/HipByte/motion-testflight so thanks Laurent Sansonetti <lrz@hipbyte.com>
 
-== License
+## License
 
   Copyright (c) 2014, Benjamin Michotte <bmichotte@gmail.com>
   All rights reserved.
